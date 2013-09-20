@@ -1,4 +1,4 @@
-utp-mobile
-==========
+utp-mobile-webservice
+=====================
 
-Mobile version of the UTP Vistual Class
+Mobile version of the UTP Virtual Class (Web Service)
