@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.password">admin</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/utp_movil</property>
+		<property name="connection.username">root</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+			
+ <!-- Enable Hibernate's automatic session context management -->
+  <property name="hibernate.current_session_context_class">thread</property>
+  
+  <mapping package="com.jmv.utp.service.entity"/>
+  <mapping class="com.jmv.utp.service.entity.Alumno"/>
+		
+<!-- 	GET /alumnos/{alu_id}
+		POST /alumnos/{alu_id}
+		PUT /alumnos/{alu_id}
+		DELETE /alumnos/{alu_id} 
+ 
+ 		<mapping resource="entity/Docente.hbm.xml" />
+		<mapping resource="entity/Curso.hbm.xml" />
+		<mapping resource="entity/Carrera.hbm.xml" />
+		<mapping resource="entity/Asignatura.hbm.xml" />
+		<mapping resource="entity/AsignaturaMatricula.hbm.xml" />
+		<mapping resource="entity/Asistencia.hbm.xml" />
+		<mapping resource="entity/CursoCarrera.hbm.xml" />
+		<mapping resource="entity/DocenteAsignado.hbm.xml" />
+		<mapping resource="entity/Evaluacion.hbm.xml" />
+		<mapping resource="entity/Facultad.hbm.xml" />
+		<mapping resource="entity/HoraAcademica.hbm.xml" />
+		<mapping resource="entity/Matricula.hbm.xml" />
+		<mapping resource="entity/PlanEstudio.hbm.xml" />
+		<mapping resource="entity/PreRequisito.hbm.xml" />
+		<mapping resource="entity/Programacion.hbm.xml" />
+		<mapping resource="entity/Seccion.hbm.xml" />
+		<mapping resource="entity/Pago.hbm.xml" />
+		<mapping resource="entity/Aula.hbm.xml" />
+		<mapping resource="entity/Ciclo.hbm.xml" />
+		<mapping resource="entity/Local.hbm.xml" />
+		<mapping resource="entity/Periodo.hbm.xml" />
+		<mapping resource="entity/Usuario.hbm.xml" /> -->
+		
+	</session-factory>
+</hibernate-configuration>
